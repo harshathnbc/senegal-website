@@ -2371,6 +2371,23 @@ html[dir='rtl'] .copyright {
   }
 
   .profile-download-qrs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .qr-code-box {
+    width: 90px;
+    height: 90px;
+    padding: 0.5rem;
+  }
+
+  .qr-main-caption {
+    font-size: 0.72rem;
+  }
+
+  .qr-sub-caption {
     display: none;
   }
 
