@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Profile - Integrated Africa Company SUARL</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==================== CORE DESIGN SYSTEM & VARIABLES ==================== */
+    :root {
+      --color-primary: #0c2240;      /* Deep Luxury Corporate Navy */
+      --color-primary-light: #193d77;/* Brand Navy Blue */
+      --color-accent-gold: #c5a059;  /* Premium Metallic Gold */
+      --color-accent-gold-dark: #a9833f;
+      --color-accent-gold-light: #e2c084;
+      --color-text-dark: #0f172a;    /* Slate 900 */
+      --color-text-muted: #475569;   /* Slate 600 */
+      --color-bg-light: #f8fafc;     /* Slate 50 */
+      --color-border: #e2e8f0;       /* Slate 200 */
+      
+      --font-en: 'Outfit', 'Inter', sans-serif;
+      --font-ar: 'Cairo', sans-serif;
+      
+      --transition-fluid: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f1f5f9;
+      color: var(--color-text-dark);
+      font-family: var(--font-en);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding-top: 0;
+    }
+
+    /* ==================== A4 BOOKLET PREVIEW LAYOUT ==================== */
+    .profile-document {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
+
+    /* A4 Container */
+    .page-container {
+      width: 210mm;
+      height: 297mm;
+      background: #f5f7fa;
+      margin: 2.5rem auto;
+      box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+      border-radius: 6px;
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      position: relative;
+      box-sizing: border-box;
+      padding: 20mm 18mm;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Page Header */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid rgba(197, 160, 89, 0.2);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .header-logo img {
+      height: 28px;
+      width: auto;
+    }
+
+    .header-logo span {
+      font-weight: 700;
+      color: var(--color-primary);
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+
+    .header-section-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-accent-gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--color-border);
+      padding-top: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: auto;
+    }
+
+    .footer-page-number {
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    /* ==================== PAGE 1: FRONT COVER ==================== */
+    .cover-page {
+      background: #E6ECF5;
+      padding: 0;
+      color: #1A1D20;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .cover-top-accent {
+      display: none;
+    }
+
+    .cover-gold-highlight {
+      color: #c5a059;
+      font-weight: 700;
+    }
+
+    .cover-body {
+      width: 100%;
+      height: 100%;
+      padding: 25mm 20mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Geometric gold line accents on cover */
+    .cover-body::before {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 100px;
+      background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.22), transparent);
+      top: 35%;
+      left: -25%;
+      transform: rotate(-35deg);
+      pointer-events: none;
+    }
+
+    .cover-body::after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 60px;
+      background: linear-gradient(90deg, transparent, rgba(12, 34, 64, 0.09), transparent);
+      bottom: 25%;
+      right: -25%;
+      transform: rotate(25deg);
+      pointer-events: none;
+    }
+
+    .cover-gears-decor {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 380px;
+      height: 380px;
+      opacity: 0.04;
+      color: #1A1D20;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .cover-badge-top {
+      border: 1px solid var(--color-accent-gold);
+      background: rgba(197, 160, 89, 0.08);
+      padding: 0.4rem 1.25rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-accent-gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(12, 34, 64, 0.04);
+      z-index: 10;
+    }
+
+    .cover-center {
+      text-align: center;
+      z-index: 10;
+      margin: auto 0;
+    }
+
+    .cover-logo-box {
+      margin-bottom: 2.5rem;
+      display: inline-block;
+    }
+
+    .cover-logo-box img {
+      height: 185px;
+      width: auto;
+      filter: drop-shadow(0 12px 30px rgba(12, 34, 64, 0.15));
+      display: block;
+    }
+
+    .cover-title-brand {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #1A1D20;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .cover-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-accent-gold-dark), var(--color-accent-gold));
+      margin: 1.25rem auto;
+      border-radius: 2px;
+    }
+
+    .cover-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1A1D20;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1.25rem;
+    }
+
+    .cover-tagline {
+      font-size: 1rem;
+      color: #1A1D20;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .cover-bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid rgba(26, 29, 32, 0.15);
+      padding-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #475569;
+      z-index: 10;
+    }
+
+    .cover-meta {
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .cover-meta-right {
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    .cover-meta-val {
+      font-weight: 700;
+      color: #1A1D20;
+    }
+
+    /* ==================== CONTENT LAYOUT ELEMENTS ==================== */
+    .section-title-block {
+      margin-bottom: 1.25rem;
+    }
+
+    .section-num {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-accent-gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .section-main-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1.2;
+    }
+
+    .intro-paragraph {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Styled Profile Photo frame */
+    .profile-photo-container {
+      width: 100%;
+      height: 160px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--color-accent-gold);
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .profile-photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Two Columns */
+    .two-col-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    /* Stats Grid */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1.1rem 0.85rem;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-primary-light);
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-txt {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    /* Pillar Box */
+    .pillars-block h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 0.85rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.4rem;
+    }
+
+    .pillars-list {
+      list-style: none;
+    }
+
+    .pillars-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .pillars-list li svg {
+      color: var(--color-accent-gold-dark);
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .pillar-details h5 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-text-dark);
+      margin-bottom: 0.1rem;
+    }
+
+    .pillar-details p {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      line-height: 1.35;
+    }
+
+    /* ==================== SUPPLY GRID ==================== */
+    .supply-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .supply-card {
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    }
+
+    .supply-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-accent-gold-dark);
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .supply-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-bg-light);
+      padding-bottom: 0.4rem;
+    }
+
+    .supply-card p {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      line-height: 1.4;
+      margin-bottom: 0.6rem;
+    }
+
+    .supply-features {
+      list-style: none;
+    }
+
+    .supply-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .supply-features li svg {
+      color: var(--color-accent-gold);
+    }
+
+    .supply-card-photo {
+      width: 100%;
+      height: 110px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 0.6rem;
+      border: 1px solid var(--color-border);
+    }
+    .supply-card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ==================== NETWORK & DIRECTORY ==================== */
+    .network-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .network-card {
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      background: var(--color-bg-light);
+    }
+
+    .network-card h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .network-card p {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      line-height: 1.4;
+    }
+
+    .closing-block {
+      border-top: 2px solid rgba(197, 160, 89, 0.3);
+      padding-top: 1.5rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .closing-text {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      max-width: 480px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.5;
+    }
+
+    .direct-channels-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .direct-chan-item {
+      background: white;
+      border: 1px solid var(--color-border);
+      padding: 0.85rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .direct-chan-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(12, 34, 64, 0.05);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary);
+      flex-shrink: 0;
+    }
+
+    .direct-chan-info {
+      text-align: left;
+    }
+
+    .direct-chan-info h5 {
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+    }
+
+    .direct-chan-info p {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .direct-chan-info a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Back Cover Styling */
+    .back-cover-page {
+      background: #E6ECF5;
+      padding: 0;
+      color: #1A1D20;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .back-cover-body {
+      width: 100%;
+      height: 100%;
+      padding: 25mm 20mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .back-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(26, 29, 32, 0.15);
+      padding-bottom: 1.25rem;
+      font-size: 0.8rem;
+      color: #475569;
+      z-index: 10;
+    }
+
+    .back-center {
+      margin: auto 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .back-logo-box {
+      margin-bottom: 1.5rem;
+    }
+
+    .back-logo-box img {
+      height: 130px;
+      width: auto;
+      filter: drop-shadow(0 10px 25px rgba(12, 34, 64, 0.12));
+      display: block;
+      margin: 0 auto;
+    }
+
+    .back-center h3 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #1A1D20;
+      margin-bottom: 0.25rem;
+    }
+
+    .back-center p {
+      font-size: 0.95rem;
+      color: #1A1D20;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .back-seal {
+      width: 50px;
+      height: 2px;
+      background: var(--color-accent-gold);
+      margin: 1.25rem auto;
+    }
+
+    .back-meta-text {
+      font-size: 0.85rem;
+      color: #1A1D20;
+      max-width: 380px;
+      line-height: 1.6;
+      margin: 0 auto;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+    }
+
+    .back-bottom {
+      font-size: 0.75rem;
+      color: #475569;
+      width: 100%;
+      border-top: 1px solid rgba(26, 29, 32, 0.15);
+      padding-top: 1.25rem;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .back-bottom p {
+      margin: 0.25rem 0;
+    }
+
+    .back-bottom p:first-child {
+      font-weight: 600;
+      color: #334155;
+    }
+
+    /* Values grid for Executive Summary bottom */
+    .values-block {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+      padding-top: 1rem;
+    }
+    .values-block h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 0.85rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.4rem;
+    }
+    .values-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .value-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 0.75rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    }
+    .value-card h5 {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+    .value-card p {
+      font-size: 0.68rem;
+      color: var(--color-text-muted);
+      line-height: 1.3;
+    }
+
+    /* ==================== PRINT STYLES ==================== */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+
+      body {
+        background: white !important;
+        color: #000000 !important;
+        padding-top: 0 !important;
+      }
+
+      .profile-document {
+        max-width: 100% !important;
+        padding-bottom: 0 !important;
+      }
+
+      .page-container {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        border: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        padding: 20mm 18mm !important;
+        overflow: hidden !important;
+        background: #f5f7fa !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .cover-page, .back-cover-page {
+        background: #E6ECF5 !important;
+        color: #1A1D20 !important;
+        padding: 0 !important;
+      }
+
+      .cover-page *, .back-cover-page * {
+        color: inherit !important;
+      }
+
+      .cover-title-brand, .back-center h3 {
+        color: #1A1D20 !important;
+      }
+
+      .cover-subtitle, .back-center p {
+        color: #1A1D20 !important;
+      }
+
+      .cover-tagline, .back-meta-text {
+        color: #1A1D20 !important;
+      }
+
+      .cover-badge-top {
+        color: var(--color-accent-gold-dark) !important;
+        border-color: var(--color-accent-gold) !important;
+        background: rgba(197, 160, 89, 0.08) !important;
+      }
+
+      .cover-bottom, .back-top, .back-bottom {
+        color: #475569 !important;
+        border-color: rgba(26, 29, 32, 0.15) !important;
+      }
+
+      .cover-meta-val {
+        color: #1A1D20 !important;
+      }
+
+      .cover-body::before, .cover-body::after {
+        opacity: 1 !important;
+      }
+
+      .cover-logo-box img, .back-logo-box img {
+        filter: drop-shadow(0 12px 30px rgba(12, 34, 64, 0.15)) !important;
+      }
+
+      .cover-gears-decor {
+        opacity: 0.05 !important;
+        color: #1A1D20 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Corporate Document Pages -->
+  <div class="profile-document">
+    
+    <!-- PAGE 1: FRONT COVER -->
+    <div class="page-container cover-page">
+
+      <div class="cover-body">
+        <!-- Interlocking Gear System Background decoration -->
+        <div class="cover-gears-decor" aria-hidden="true">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.2">
+            <g transform="translate(80, 20)">
+              <circle cx="0" cy="0" r="18" stroke-dasharray="2,2" />
+              <circle cx="0" cy="0" r="22" />
+              <circle cx="0" cy="0" r="12" />
+              <path d="M -3,-24 L 3,-24 L 5,-21 L -5,-21 Z" fill="currentColor" opacity="0.3" />
+              <path d="M -3,24 L 3,24 L 5,21 L -5,21 Z" fill="currentColor" opacity="0.3" />
+              <path d="M -24,-3 L -24,3 L -21,5 L -21,-5 Z" fill="currentColor" opacity="0.3" />
+              <path d="M 24,-3 L 24,3 L 21,5 L 21,-5 Z" fill="currentColor" opacity="0.3" />
+              <path d="M -15,-19 L -11,-15 L -8,-17 L -12,-21 Z" fill="currentColor" opacity="0.3" />
+              <path d="M 15,19 L 11,15 L 8,17 L 12,21 Z" fill="currentColor" opacity="0.3" />
+              <path d="M -19,15 L -15,11 L -17,8 L -21,12 Z" fill="currentColor" opacity="0.3" />
+              <path d="M 19,-15 L 15,-11 L 17,-8 L 21,-12 Z" fill="currentColor" opacity="0.3" />
+              <path d="M-12 0 h24 M0 -12 v24" />
+              <circle cx="0" cy="0" r="4" fill="currentColor" />
+            </g>
+            <g transform="translate(95, 42)">
+              <circle cx="0" cy="0" r="10" />
+              <circle cx="0" cy="0" r="6" />
+              <path d="M -2,-11.5 L 2,-11.5 L 3,-10 L -3,-10 Z" fill="currentColor" opacity="0.3" />
+              <path d="M -2,11.5 L 2,11.5 L 3,10 L -3,10 Z" fill="currentColor" opacity="0.3" />
+              <path d="M -11.5,-2 L -11.5,2 L -10,3 L -10,-3 Z" fill="currentColor" opacity="0.3" />
+              <path d="M 11.5,-2 L 11.5,2 L 10,3 L 10,-3 Z" fill="currentColor" opacity="0.3" />
+              <path d="M-6 0 h12 M0 -6 v12" />
+            </g>
+            <g transform="translate(54, 8)">
+              <circle cx="0" cy="0" r="8" stroke-dasharray="1,1" />
+              <circle cx="0" cy="0" r="10" />
+              <path d="M -1.5,-11 L 1.5,-11 L 2,-9.5 L -2,-9.5 Z" fill="currentColor" opacity="0.3" />
+              <path d="M -1.5,11 L 1.5,11 L 2,9.5 L -2,9.5 Z" fill="currentColor" opacity="0.3" />
+              <circle cx="0" cy="0" r="3" />
+            </g>
+            <path d="M 54 8 L 80 20 L 95 42" opacity="0.4" />
+            <circle cx="67" cy="14" r="1.5" fill="currentColor" />
+            <circle cx="87" cy="31" r="1.5" fill="currentColor" />
+          </svg>
+        </div>
+
+        <span class="cover-badge-top">Corporate Profile 2024–2025</span>
+        
+        <div class="cover-center">
+          <div class="cover-logo-box">
+            <img src="logo_nobg.png" alt="Integrated Africa Company Logo">
+          </div>
+          <h1 class="cover-title-brand">INTEGRATED AFRICA COMPANY</h1>
+          <div class="cover-divider"></div>
+          <h2 class="cover-subtitle">SUARL — DAKAR, SENEGAL</h2>
+          <p class="cover-tagline">Bridging <span class="cover-gold-highlight">Saudi Industrial Excellence</span> with <span class="cover-gold-highlight">West African Growth Markets</span></p>
+        </div>
+        
+        <div class="cover-bottom">
+          <div class="cover-meta">
+            <p>Established</p>
+            <p class="cover-meta-val">Est. 2024 · Dakar, Senegal</p>
+          </div>
+          <div class="cover-meta-right">
+            <p>Core Sectors</p>
+            <p class="cover-meta-val">Petrochemicals · Agri-Nutrients · Lubricants</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- PAGE 2: EXECUTIVE SUMMARY -->
+    <div class="page-container">
+      <header class="page-header">
+        <div class="header-logo">
+          <img src="logo_nobg.png" alt="Emblem">
+          <span>Integrated Africa Company</span>
+        </div>
+        <span class="header-section-name">Corporate Overview</span>
+      </header>
+      
+      <div class="section-title-block">
+        <span class="section-num">01</span>
+        <h2 class="section-main-title">Executive Summary</h2>
+      </div>
+      
+      <!-- Hero Photo -->
+      <div class="profile-photo-container">
+        <img src="hero_bg.png" alt="Integrated Africa Company Operations">
+      </div>
+      
+      <p class="intro-paragraph">
+        Integrated Africa Company – SUARL is the West African subsidiary of Integrated Company (Saudi Arabia), established in Dakar, Senegal to serve as a strategic distribution gateway for premium Saudi industrial products across the ECOWAS region. We specialize in the authorized supply of SABIC petrochemical polymers, SABIC agricultural fertilizers, and PETROLUBE premium lubricants — connecting world-class Saudi manufacturers with Africa's fastest-growing markets.
+      </p>
+      
+      <!-- Key Statistics -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <p class="stat-val">15+</p>
+          <p class="stat-txt">Years Experience</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-val">5+</p>
+          <p class="stat-txt">Countries Served</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-val">20+</p>
+          <p class="stat-txt">Product Lines</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-val">ECOWAS</p>
+          <p class="stat-txt">Market Access</p>
+        </div>
+      </div>
+      
+      <!-- Strategic Pillars -->
+      <div class="pillars-block">
+        <h4>Strategic Business Pillars</h4>
+        <ul class="pillars-list">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            <div class="pillar-details">
+              <h5>Approved SABIC Distributor</h5>
+              <p>Authorized corporate distribution of SABIC polymers (HDPE, PP) and agri-nutrients (urea, NPK fertilizers) across Senegal and the ECOWAS zone.</p>
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"/></svg>
+            <div class="pillar-details">
+              <h5>Premium Saudi Quality</h5>
+              <p>Direct factory-authorized supply chains from Saudi Arabia's top manufacturers, guaranteeing product authenticity and industrial-grade quality standards.</p>
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            <div class="pillar-details">
+              <h5>ECOWAS Market Access</h5>
+              <p>Strategic Dakar-based operations providing seamless access to 15 West African nations through established Saudi-to-Senegal logistics corridors.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Core Values Block -->
+      <div class="values-block">
+        <h4>Core Operational Values</h4>
+        <div class="values-row">
+          <div class="value-card">
+            <h5>Supply Chain Integrity</h5>
+            <p>Direct factory-to-market logistics ensuring product authenticity.</p>
+          </div>
+          <div class="value-card">
+            <h5>Regional Expertise</h5>
+            <p>Deep understanding of West African regulatory and market dynamics.</p>
+          </div>
+          <div class="value-card">
+            <h5>Partnership Excellence</h5>
+            <p>Long-term strategic alliances with world-class Saudi manufacturers.</p>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="page-footer">
+        <span>Integrated Africa Company · Corporate Profile</span>
+        <span class="footer-page-number">02</span>
+      </footer>
+    </div>
+    
+    <!-- PAGE 3: PRODUCTS — SABIC Polymers & Agri-Nutrients -->
+    <div class="page-container">
+      <header class="page-header">
+        <div class="header-logo">
+          <img src="logo_nobg.png" alt="Emblem">
+          <span>Integrated Africa Company</span>
+        </div>
+        <span class="header-section-name">Product Portfolio</span>
+      </header>
+      
+      <div class="section-title-block">
+        <span class="section-num">02</span>
+        <h2 class="section-main-title">SABIC Polymers & Agri-Nutrients</h2>
+      </div>
+      
+      <p class="intro-paragraph">
+        As an approved SABIC distributor, Integrated Africa Company supplies premium petrochemical polymers and agricultural fertilizers to Senegal's manufacturing, packaging, and farming sectors — supporting regional industrial growth with world-class Saudi products.
+      </p>
+      
+      <!-- Product Photo -->
+      <div class="profile-photo-container">
+        <img src="sabic_polymers.png" alt="SABIC Polymers and Products">
+      </div>
+      
+      <!-- Supply Grid -->
+      <div class="supply-grid">
+        <!-- SABIC Polymers -->
+        <div class="supply-card">
+          <span class="supply-tag">Petrochemicals</span>
+          <h4>SABIC Polymers</h4>
+          <p>Authorized distribution of SABIC's high-density polyethylene (HDPE F00952) and polypropylene (PP 500GA), essential for packaging, water pipes, agricultural film, and injection molding across West Africa.</p>
+          <ul class="supply-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>HDPE F00952 — Blow Molding Grade</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>PP 500GA — Extrusion & Film Grade</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>High Chemical Resistance</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Superior Tensile Strength</span></li>
+          </ul>
+        </div>
+        
+        <!-- SABIC Agri-Nutrients -->
+        <div class="supply-card">
+          <span class="supply-tag">Agriculture</span>
+          <h4>SABIC Agri-Nutrients</h4>
+          <p>Approved supply of SABIC's premium agricultural urea and NPK compound fertilizers, specifically designed to boost crop yields for Senegal's rice paddies, groundnut farms, and horticultural operations.</p>
+          <ul class="supply-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>High-Nitrogen Granular Urea (46%)</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>NPK Compound Fertilizers</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Optimal Soil Enrichment</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Maximized Crop Productivity</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <footer class="page-footer">
+        <span>Integrated Africa Company · Corporate Profile</span>
+        <span class="footer-page-number">03</span>
+      </footer>
+    </div>
+    
+    <!-- PAGE 4: PRODUCTS — PETROLUBE Lubricants & ECOWAS Gateway -->
+    <div class="page-container">
+      <header class="page-header">
+        <div class="header-logo">
+          <img src="logo_nobg.png" alt="Emblem">
+          <span>Integrated Africa Company</span>
+        </div>
+        <span class="header-section-name">Lubricants & Market Access</span>
+      </header>
+      
+      <div class="section-title-block">
+        <span class="section-num">03</span>
+        <h2 class="section-main-title">PETROMIN Lubricants & ECOWAS Gateway</h2>
+      </div>
+      
+      <p class="intro-paragraph">
+        Integrated Africa Company delivers premium PETROLUBE industrial lubricants and leverages Dakar's strategic position as the gateway to 15 West African nations, establishing a robust Saudi-to-Senegal supply chain for the entire ECOWAS region.
+      </p>
+      
+      <!-- Product Photo -->
+      <div class="profile-photo-container">
+        <img src="petromin_oils.png" alt="PETROMIN Lubricant Products">
+      </div>
+      
+      <!-- Supply Grid -->
+      <div class="supply-grid">
+        <!-- PETROMIN Lubricants -->
+        <div class="supply-card">
+          <span class="supply-tag">Industrial Lubricants</span>
+          <h4>PETROMIN Lubricants</h4>
+          <p>Strategic distribution of PETROMIN heavy-duty engine oils, gear oils, hydraulic fluids, and specialty greases — supplied under the PETROLUBE brand, engineered for mining fleets, transport vehicles, and industrial machinery across West Africa.</p>
+          <ul class="supply-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Heavy-Duty Engine Oils</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Industrial Gear Oils</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Hydraulic Fluids & Greases</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Extreme Temperature Stability</span></li>
+          </ul>
+        </div>
+        
+        <!-- ECOWAS Market Gateway -->
+        <div class="supply-card">
+          <span class="supply-tag">Regional Strategy</span>
+          <h4>ECOWAS Market Gateway</h4>
+          <p>Dakar serves as our strategic hub connecting Saudi industrial manufacturers to 15 West African nations. Our established Saudi-Dakar supply chain ensures seamless product flow across the entire ECOWAS economic zone.</p>
+          <ul class="supply-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>15 ECOWAS Nations Coverage</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Saudi–Dakar Direct Supply Chain</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Port of Dakar Logistics Hub</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Regional Customs Compliance</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <footer class="page-footer">
+        <span>Integrated Africa Company · Corporate Profile</span>
+        <span class="footer-page-number">04</span>
+      </footer>
+    </div>
+    
+    <!-- PAGE 5: CONTACT & NETWORK -->
+    <div class="page-container">
+      <header class="page-header">
+        <div class="header-logo">
+          <img src="logo_nobg.png" alt="Emblem">
+          <span>Integrated Africa Company</span>
+        </div>
+        <span class="header-section-name">Corporate Network</span>
+      </header>
+      
+      <div class="section-title-block">
+        <span class="section-num">04</span>
+        <h2 class="section-main-title">Contact & Network Directory</h2>
+      </div>
+      
+      <!-- Embedded Photo -->
+      <div class="profile-photo-container">
+        <img src="hero_bg.png" alt="Dakar Senegal Operations" style="object-position: center 30%;">
+      </div>
+      
+      <!-- Network Directory -->
+      <div class="network-container">
+        <div class="network-card">
+          <h4>🇸🇳 Senegal Office — SUARL</h4>
+          <p>INTEGRATED AFRICA COMPANY – SUARL<br>Villa N° 72, Cité Asecna, Ouakam,<br>Dakar, Sénégal</p>
+        </div>
+        <div class="network-card">
+          <h4>🇸🇦 Saudi Arabia — Headquarters</h4>
+          <p>Integrated Company<br>Al Mojil Tower – Level 6,<br>King Salman Road 36341, Al Hasa,<br>Kingdom of Saudi Arabia</p>
+        </div>
+      </div>
+      
+      <!-- Closing / Channels -->
+      <div class="closing-block">
+        <p class="closing-text">Connect with our business development team in Dakar or Al Hasa to discover trade partnerships and supply opportunities across West Africa.</p>
+        
+        <div class="direct-channels-row">
+          <!-- Phone -->
+          <div class="direct-chan-item">
+            <div class="direct-chan-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div class="direct-chan-info">
+              <h5>Phone</h5>
+              <p dir="ltr"><a href="tel:+966557266658">+966 55 726 6658</a></p>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="direct-chan-item">
+            <div class="direct-chan-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8m-2 11H4a2 2 0 01-2-2V6a2 2 0 012-2h16a2 2 0 012 2v11a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div class="direct-chan-info">
+              <h5>Email</h5>
+              <p><a href="mailto:senegal@integrated-equipment.com">senegal@integrated-equipment.com</a></p>
+            </div>
+          </div>
+          <!-- Website -->
+          <div class="direct-chan-item">
+            <div class="direct-chan-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            </div>
+            <div class="direct-chan-info">
+              <h5>Website</h5>
+              <p><a href="https://senegal.integrated-equipment.com">senegal.integrated-equipment.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="page-footer">
+        <span>Integrated Africa Company · Corporate Profile</span>
+        <span class="footer-page-number">05</span>
+      </footer>
+    </div>
+    
+    <!-- PAGE 6: BACK COVER -->
+    <div class="page-container back-cover-page">
+      <div class="back-cover-body">
+        <div class="back-top">
+          <span>Integrated Africa Company</span>
+          <span>IAC-SUARL-2024</span>
+        </div>
+        
+        <div class="back-center">
+          <div class="back-logo-box">
+            <img src="logo_nobg.png" alt="Integrated Africa Company Logo">
+          </div>
+          <h3>INTEGRATED AFRICA COMPANY</h3>
+          <p>SUARL</p>
+          <div class="back-seal"></div>
+          <p class="back-meta-text">Villa N° 72, Cité Asecna, Ouakam,<br>Dakar, Sénégal</p>
+          <div class="back-seal"></div>
+          <p class="back-meta-text" style="text-transform: none; letter-spacing: 0.5px;">Bridging <span class="cover-gold-highlight">Saudi Industrial Excellence</span><br>with <span class="cover-gold-highlight">West African Growth Markets</span></p>
+        </div>
+        
+        <div class="back-bottom">
+          <p>senegal@integrated-equipment.com &nbsp;|&nbsp; +966 55 726 6658</p>
+          <p>&copy; 2024–2025 Integrated Company. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>
