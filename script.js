@@ -48,10 +48,8 @@ const translations = {
     profile_desc: "Get comprehensive information about our products, capabilities, and regional presence across West Africa.",
     profile_btn_en: "English Profile",
     profile_btn_fr: "Profil Français",
-    profile_btn_ar: "الملف العربي",
     profile_scan_en: "Scan for English",
     profile_scan_fr: "Scan for French",
-    profile_scan_ar: "Scan for Arabic",
     profile_scan_mobile: "Scan to download on mobile",
 
     // Products Section
@@ -176,10 +174,8 @@ const translations = {
     profile_desc: "Obtenez des informations complètes sur nos produits, nos capacités et notre présence régionale en Afrique de l'Ouest.",
     profile_btn_en: "Profil anglais",
     profile_btn_fr: "Profil français",
-    profile_btn_ar: "الملف العربي",
     profile_scan_en: "Scanner pour l'anglais",
     profile_scan_fr: "Scanner pour le français",
-    profile_scan_ar: "Scanner pour l'arabe",
     profile_scan_mobile: "Scannez pour télécharger sur mobile",
 
     // Products Section
@@ -304,10 +300,8 @@ const translations = {
     profile_desc: "احصل على معلومات شاملة حول منتجاتنا وقدراتنا وتواجدنا الإقليمي في غرب أفريقيا.",
     profile_btn_en: "الملف الإنجليزي",
     profile_btn_fr: "الملف الفرنسي",
-    profile_btn_ar: "الملف العربي",
     profile_scan_en: "مسح للإنجليزية",
     profile_scan_fr: "مسح للفرنسية",
-    profile_scan_ar: "مسح للعربية",
     profile_scan_mobile: "امسح للتحميل على الهاتف",
 
     // Products Section

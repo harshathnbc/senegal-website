@@ -16,13 +16,13 @@ Open `index.html` in a browser (or any static server) to preview.
 | `index.html` | Single-page site. Sections are `<section id="<name>-section">`, switched by hash routing (`#home`, `#about`, `#products`, `#partners`, `#contact`). |
 | `script.js` | `translations` object (EN/FR/AR), language buttons `.btn-lang-option` (`VALID_LANGS`, saved choice via `getSavedLang`), hash navigation (`navigateToSection`, `VALID_SECTIONS`), mobile menu, contact form → `mailto:` link. |
 | `style.css` | All styling. Design tokens on `:root` (brand blue hue 216, gold hue 38, plus `--senegal-green`). |
-| `Profile_Senegal_En.html` / `_Fr.html` / `_Ar.html` | Printable A4 profile booklets, one file per language. Print to PDF to regenerate the matching `Profile_Senegal_*.pdf`. |
-| `qr_en.png`, `qr_fr.png`, `qr_ar.png` | QR codes pointing to this site's profile PDFs (not the same as the main site's). |
+| `Profile_Senegal_En.pdf`, `Profile_Senegal_Fr.pdf` | Downloadable company profiles (English and French only — the Arabic profile was removed). Since Oct 2026 these are the "GCC – West Africa" profiles supplied as finished PDFs; replace the file in place to update. The download buttons save them under their original names via the `download="..."` attribute. |
+| `qr_en.png`, `qr_fr.png` | QR codes encoding `https://senegal.integrated-equipment.com/Profile_Senegal_En.pdf` / `_Fr.pdf`. **Keep those PDF filenames** or the printed QR codes break. |
+| `Profile_Senegal_En.html` / `_Fr.html` / `_Ar.html` | Old printable A4 booklets that the June 2026 PDFs were printed from. They do not match the current PDFs. |
 
 ## Conventions
 
 - Trilingual EN/FR/AR. Every visible string has a `data-i18n="key"` attribute and an entry in **all three** of `translations.en`, `.fr`, `.ar` in `script.js`. Arabic switches to RTL and the Cairo font (`FONT_RTL`).
-- The three profile HTML files are separate copies — a content change usually has to be made in all three, then the PDFs re-exported.
 - Adding a section: add the `<section id="x-section">`, nav `<li data-page="x">` (navbar, mobile menu and footer all have one), the key in `VALID_SECTIONS`, and the translations.
 - Contact form has no backend; it opens the user's mail client. Note: the page shows `senegal@integrated-equipment.com`, but `script.js` sends the form to `info@integrated-equipment.com`.
 
@@ -35,5 +35,5 @@ The main company site has its own repo:
 - Same brand: same blue/gold tokens, Outfit/Inter/Cairo fonts, glass-card layout.
 - **Shared image files are duplicated, not shared.** These are byte-identical copies in both repos — if you replace one, copy it to the other:
   `Integrated_Logo.png`, `logo_nobg.png`, `favicon.ico`, `favicon.png`, `petrolube_logo.png`, `petrolube_products.png`, `petromin_oils.png`, `sabic_logo.png`, `sabic_fertilizer.png`, `sabic_polymers.png`, `saudi_construction.png`, `senegal_branch.png`.
-- `qr_en.png` / `qr_ar.png` have the same names in both repos but **different content** — never copy them across.
+- `qr_en.png` has the same name in both repos but **different content** — never copy QR codes across.
 - Company-wide facts (addresses, phone numbers, partner brands, emails) appear on both sites; when one changes, check the other.
