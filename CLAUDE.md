@@ -22,7 +22,8 @@ Open `index.html` in a browser (or any static server) to preview.
 
 ## Conventions
 
-- Trilingual EN/FR/AR. Every visible string has a `data-i18n="key"` attribute and an entry in **all three** of `translations.en`, `.fr`, `.ar` in `script.js`. Arabic switches to RTL and the Cairo font (`FONT_RTL`).
+- Trilingual EN/FR/AR. Every visible string has a `data-i18n="key"` attribute and an entry in **all three** of `translations.en`, `.fr`, `.ar` in `script.js`. Arabic switches to RTL and the Cairo font (`FONT_RTL`). Strings that need inline markup (e.g. `<strong>`) use `data-i18n-html="key"` instead, which sets `innerHTML`.
+- Products section (`#products-section`): four matching `.product-card`s — Lubricants, Agri-Nutrients, Plastic Bags (with size chips), ECOWAS Market Gateway — each with an icon tile, category label, title, description and a check-list pinned to the bottom, followed by a "Request a Quote" banner linking to `#contact`. Grid is 4 columns, 2 at ≤1200px, 1 at ≤768px.
 - Adding a section: add the `<section id="x-section">`, nav `<li data-page="x">` (navbar, mobile menu and footer all have one), the key in `VALID_SECTIONS`, and the translations.
 - Contact form has no backend; it opens the user's mail client. Note: the page shows `senegal@integrated-equipment.com`, but `script.js` sends the form to `info@integrated-equipment.com`.
 

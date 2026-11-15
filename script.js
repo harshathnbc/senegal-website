@@ -54,32 +54,36 @@ const translations = {
 
     // Products Section
     products_badge: "Our Products",
-    products_title: "Industrial Products & Distribution",
-    products_desc: "Premium industrial materials from world-leading manufacturers, delivered with robust global supply chain excellence.",
+    products_title: "Import & Distribution You Can Rely On",
+    products_desc: "Integrated Company specializes in the <strong>import and distribution</strong> of <strong>lubricants</strong>, <strong>agri-nutrients</strong> and <strong>plastic bags</strong> — sourcing quality products and delivering them dependably to our customers.",
 
-    // SABIC Polymers Card
-    dist_tag_plastic: "Manufacturing",
-    dist_hdpe_title: "SABIC Polymers",
-    dist_hdpe_desc: "High-density polyethylene (HDPE) and polypropylene (PP) polymers essential for blowing extrusion, injection molding, and agricultural pipe manufacturing. Our SABIC polymer grades — including HDPE F00952 and PP 500GA — are specifically selected for the West African market, supporting packaging manufacturers, water pipe producers, and agricultural film extruders across Senegal and the ECOWAS region.",
-    dist_hdpe_f1: "High Tensile Strength",
-    dist_hdpe_f2: "Excellent Chemical Resistance",
-    dist_hdpe_f3: "Multiple Processing Grades",
+    // Lubricants Card
+    prod_lub_cat: "Industrial & Automotive",
+    prod_lub_title: "Lubricants",
+    prod_lub_desc: "A full range of engine oils, gear oils, hydraulic fluids and greases for passenger vehicles, heavy-duty fleets and industrial machinery.",
+    prod_lub_f1: "Engine & Gear Oils",
+    prod_lub_f2: "Hydraulic Fluids & Greases",
+    prod_lub_f3: "Automotive & Industrial Use",
 
-    // SABIC Agri-Nutrients Card
-    dist_tag_agri: "Agriculture",
-    dist_fertilizer_title: "SABIC Agri-Nutrients",
-    dist_fertilizer_desc: "Approved global distributor of SABIC's world-leading agricultural urea and chemical fertilizers, designed to maximize crop yields across diverse soil types. In Senegal, our fertilizers play a critical role in supporting the national agricultural sector — from rice paddies in the Casamance to groundnut farms in the Sine-Saloum — helping local farmers improve food security and economic productivity across the country.",
-    dist_fertilizer_f1: "High Nitrogen Content",
-    dist_fertilizer_f2: "Optimized Solubility",
-    dist_fertilizer_f3: "Soil-Adaptive Formulas",
+    // Agri-Nutrients Card
+    prod_agri_cat: "Agriculture",
+    prod_agri_title: "Agri-Nutrients",
+    prod_agri_desc: "Urea and other fertilizers that help farmers improve soil fertility and increase crop yields across a wide variety of crops and soil types.",
+    prod_agri_f1: "Urea & Chemical Fertilizers",
+    prod_agri_f2: "Improved Crop Yields",
+    prod_agri_f3: "Suitable for Diverse Soils",
 
-    // PETROLUBE Lubricants Card
-    dist_tag_fluid: "Industrial",
-    dist_lubricant_title: "PETROLUBE Lubricants",
-    dist_lubricant_desc: "Approved distribution of premium PETROLUBE and NATIONAL heavy-duty automotive engine oils, gear oils, hydraulic fluids, and grease systems. Our lubricant portfolio serves the entire West African market — from mining fleet operators in Guinea to transport companies in Senegal and Mali — providing maximum engine protection, thermal stability, and extended drain intervals across extreme operating conditions.",
-    dist_lubricant_f1: "Maximum Wear Protection",
-    dist_lubricant_f2: "Thermal Stability",
-    dist_lubricant_f3: "Extended Drain Intervals",
+    // Plastic Bags Card
+    prod_bags_cat: "Packaging",
+    prod_bags_title: "Plastic Bags",
+    prod_bags_desc: "Durable plastic bags in a range of sizes for retail, packaging, agricultural and industrial applications.",
+    prod_bags_f1: "Multiple Sizes Available",
+    prod_bags_f2: "Strong & Durable",
+    prod_bags_f3: "Bulk Supply",
+    prod_bags_size_s: "Small",
+    prod_bags_size_m: "Medium",
+    prod_bags_size_l: "Large",
+    prod_bags_size_custom: "Custom Sizes",
 
     // Global Expansion Card
     dist_tag_expansion: "Global Reach",
@@ -87,6 +91,11 @@ const translations = {
     dist_expansion_desc: "Senegal serves as our strategic gateway to the entire ECOWAS economic region. We are actively expanding our supply footprint across 15 West African nations, building robust logistics pipelines from Saudi Arabia through Dakar to serve growing industrial demands in construction, agriculture, and transportation sectors.",
     dist_expansion_f1: "15 ECOWAS Nations",
     dist_expansion_f2: "Saudi-Dakar Supply Chain",
+
+    // Request a Quote Banner
+    prod_cta_title: "Looking for a reliable supplier?",
+    prod_cta_desc: "Contact us for pricing, availability and bulk orders.",
+    prod_cta_btn: "Request a Quote",
 
     // Partners Section
     partners_badge: "Strategic Alliances",
@@ -180,32 +189,36 @@ const translations = {
 
     // Products Section
     products_badge: "Nos produits",
-    products_title: "Produits industriels et distribution",
-    products_desc: "Matériaux industriels de qualité supérieure des fabricants leaders mondiaux, livrés avec une excellence logistique mondiale.",
+    products_title: "Importation et distribution sur lesquelles vous pouvez compter",
+    products_desc: "Integrated Company est spécialisée dans l'<strong>importation et la distribution</strong> de <strong>lubrifiants</strong>, d'<strong>agro-nutriments</strong> et de <strong>sacs plastiques</strong> — en sélectionnant des produits de qualité et en les livrant de manière fiable à nos clients.",
 
-    // SABIC Polymers Card
-    dist_tag_plastic: "Fabrication",
-    dist_hdpe_title: "Polymères SABIC",
-    dist_hdpe_desc: "Polymères de polyéthylène haute densité (PEHD) et de polypropylène (PP) essentiels pour l'extrusion-soufflage, le moulage par injection et la fabrication de tuyaux agricoles. Nos grades de polymères SABIC — dont le PEHD F00952 et le PP 500GA — sont spécifiquement sélectionnés pour le marché ouest-africain, soutenant les fabricants d'emballages, les producteurs de tuyaux d'eau et les extrudeurs de films agricoles au Sénégal et dans la région de la CEDEAO.",
-    dist_hdpe_f1: "Haute résistance à la traction",
-    dist_hdpe_f2: "Excellente résistance chimique",
-    dist_hdpe_f3: "Multiples grades de traitement",
+    // Lubricants Card
+    prod_lub_cat: "Industrie et automobile",
+    prod_lub_title: "Lubrifiants",
+    prod_lub_desc: "Une gamme complète d'huiles moteur, d'huiles pour engrenages, de fluides hydrauliques et de graisses pour véhicules particuliers, flottes de poids lourds et machines industrielles.",
+    prod_lub_f1: "Huiles moteur et engrenages",
+    prod_lub_f2: "Fluides hydrauliques et graisses",
+    prod_lub_f3: "Usage automobile et industriel",
 
-    // SABIC Agri-Nutrients Card
-    dist_tag_agri: "Agriculture",
-    dist_fertilizer_title: "Agro-nutriments SABIC",
-    dist_fertilizer_desc: "Distributeur mondial agréé des engrais chimiques et de l'urée agricole de classe mondiale de SABIC, conçus pour maximiser les rendements agricoles sur divers types de sols. Au Sénégal, nos engrais jouent un rôle essentiel dans le soutien du secteur agricole national — des rizières de la Casamance aux exploitations d'arachides du Sine-Saloum — aidant les agriculteurs locaux à améliorer la sécurité alimentaire et la productivité économique dans tout le pays.",
-    dist_fertilizer_f1: "Haute teneur en azote",
-    dist_fertilizer_f2: "Solubilité optimisée",
-    dist_fertilizer_f3: "Formules adaptées aux sols",
+    // Agri-Nutrients Card
+    prod_agri_cat: "Agriculture",
+    prod_agri_title: "Agro-nutriments",
+    prod_agri_desc: "De l'urée et d'autres engrais qui aident les agriculteurs à améliorer la fertilité des sols et à augmenter les rendements sur une grande variété de cultures et de types de sols.",
+    prod_agri_f1: "Urée et engrais chimiques",
+    prod_agri_f2: "Meilleurs rendements agricoles",
+    prod_agri_f3: "Adaptés à divers types de sols",
 
-    // PETROLUBE Lubricants Card
-    dist_tag_fluid: "Industriel",
-    dist_lubricant_title: "Lubrifiants PETROLUBE",
-    dist_lubricant_desc: "Distribution agréée de lubrifiants premium PETROLUBE et NATIONAL : huiles moteurs lourds, huiles d'engrenages, fluides hydrauliques et systèmes de graisse. Notre portefeuille de lubrifiants dessert l'ensemble du marché ouest-africain — des opérateurs de flottes minières en Guinée aux sociétés de transport au Sénégal et au Mali — offrant une protection maximale du moteur, une stabilité thermique et des intervalles de vidange prolongés dans des conditions de fonctionnement extrêmes.",
-    dist_lubricant_f1: "Protection maximale contre l'usure",
-    dist_lubricant_f2: "Stabilité thermique",
-    dist_lubricant_f3: "Intervalles de vidange prolongés",
+    // Plastic Bags Card
+    prod_bags_cat: "Emballage",
+    prod_bags_title: "Sacs plastiques",
+    prod_bags_desc: "Des sacs plastiques résistants, disponibles en plusieurs tailles, pour le commerce de détail, l'emballage, l'agriculture et l'industrie.",
+    prod_bags_f1: "Plusieurs tailles disponibles",
+    prod_bags_f2: "Solides et durables",
+    prod_bags_f3: "Fourniture en gros",
+    prod_bags_size_s: "Petit",
+    prod_bags_size_m: "Moyen",
+    prod_bags_size_l: "Grand",
+    prod_bags_size_custom: "Tailles sur mesure",
 
     // Global Expansion Card
     dist_tag_expansion: "Portée mondiale",
@@ -213,6 +226,11 @@ const translations = {
     dist_expansion_desc: "Le Sénégal sert de porte d'entrée stratégique vers l'ensemble de la région économique de la CEDEAO. Nous étendons activement notre empreinte d'approvisionnement dans 15 pays d'Afrique de l'Ouest, construisant des pipelines logistiques robustes de l'Arabie saoudite à travers Dakar pour répondre aux demandes industrielles croissantes dans les secteurs de la construction, de l'agriculture et du transport.",
     dist_expansion_f1: "15 nations de la CEDEAO",
     dist_expansion_f2: "Chaîne d'approvisionnement Arabie-Dakar",
+
+    // Request a Quote Banner
+    prod_cta_title: "Vous cherchez un fournisseur fiable ?",
+    prod_cta_desc: "Contactez-nous pour les prix, la disponibilité et les commandes en gros.",
+    prod_cta_btn: "Demander un devis",
 
     // Partners Section
     partners_badge: "Alliances stratégiques",
@@ -306,32 +324,36 @@ const translations = {
 
     // Products Section
     products_badge: "منتجاتنا",
-    products_title: "المنتجات الصناعية والتوزيع",
-    products_desc: "مواد صناعية فاخرة من كبرى الشركات المصنعة العالمية، يتم توصيلها بتميز لوجستي عالمي.",
+    products_title: "استيراد وتوزيع يمكنك الاعتماد عليه",
+    products_desc: "تتخصص الشركة المتكاملة في <strong>استيراد وتوزيع</strong> <strong>زيوت التشحيم</strong> و<strong>المغذيات الزراعية</strong> و<strong>الأكياس البلاستيكية</strong> — نوفّر منتجات عالية الجودة ونوصلها إلى عملائنا بكل موثوقية.",
 
-    // SABIC Polymers Card
-    dist_tag_plastic: "التصنيع",
-    dist_hdpe_title: "بوليمرات سابك",
-    dist_hdpe_desc: "بوليمرات البولي إيثيلين عالي الكثافة (HDPE) والبولي بروبيلين (PP) الأساسية لخطوط سحب الأنابيب والقولبة بالحقن وتصنيع الأنابيب الزراعية. درجات بوليمرات سابك لدينا — بما في ذلك HDPE F00952 وPP 500GA — مختارة خصيصاً لسوق غرب أفريقيا، لدعم مصنعي التعبئة ومنتجي أنابيب المياه ومصنعي الأفلام الزراعية في السنغال ومنطقة الإيكواس.",
-    dist_hdpe_f1: "مقاومة شد عالية",
-    dist_hdpe_f2: "مقاومة كيميائية ممتازة",
-    dist_hdpe_f3: "درجات معالجة متعددة",
+    // Lubricants Card
+    prod_lub_cat: "صناعي وسيارات",
+    prod_lub_title: "زيوت التشحيم",
+    prod_lub_desc: "مجموعة كاملة من زيوت المحركات وزيوت التروس والسوائل الهيدروليكية والشحوم لسيارات الركاب وأساطيل المركبات الثقيلة والآلات الصناعية.",
+    prod_lub_f1: "زيوت المحركات والتروس",
+    prod_lub_f2: "السوائل الهيدروليكية والشحوم",
+    prod_lub_f3: "للاستخدام في السيارات والصناعة",
 
-    // SABIC Agri-Nutrients Card
-    dist_tag_agri: "الزراعة",
-    dist_fertilizer_title: "مغذيات سابك الزراعية",
-    dist_fertilizer_desc: "موزع عالمي معتمد لأسمدة اليوريا الزراعية والأسمدة الكيماوية الرائدة عالمياً من سابك، المصممة لتعظيم إنتاجية المحاصيل عبر أنواع التربة المتنوعة. في السنغال، تلعب أسمدتنا دوراً حيوياً في دعم القطاع الزراعي الوطني — من حقول الأرز في كازامانس إلى مزارع الفول السوداني في سين-سالوم — مساعدة المزارعين المحليين على تحسين الأمن الغذائي والإنتاجية الاقتصادية في جميع أنحاء البلاد.",
-    dist_fertilizer_f1: "محتوى نيتروجين عالي",
-    dist_fertilizer_f2: "قابلية ذوبان محسّنة",
-    dist_fertilizer_f3: "تركيبات متكيفة مع التربة",
+    // Agri-Nutrients Card
+    prod_agri_cat: "الزراعة",
+    prod_agri_title: "المغذيات الزراعية",
+    prod_agri_desc: "اليوريا وأسمدة أخرى تساعد المزارعين على تحسين خصوبة التربة وزيادة إنتاجية المحاصيل لمجموعة واسعة من المحاصيل وأنواع التربة.",
+    prod_agri_f1: "اليوريا والأسمدة الكيماوية",
+    prod_agri_f2: "إنتاجية أعلى للمحاصيل",
+    prod_agri_f3: "مناسبة لمختلف أنواع التربة",
 
-    // PETROLUBE Lubricants Card
-    dist_tag_fluid: "صناعي",
-    dist_lubricant_title: "زيوت تشحيم بترولوب",
-    dist_lubricant_desc: "التوزيع المعتمد لزيوت تشحيم بترولوب وناشيونال الفاخرة: زيوت محركات شاقة، زيوت تروس، سوائل هيدروليكية، وأنظمة شحوم. تخدم محفظة زيوت التشحيم لدينا سوق غرب أفريقيا بالكامل — من مشغلي أساطيل التعدين في غينيا إلى شركات النقل في السنغال ومالي — مما يوفر أقصى حماية للمحرك واستقراراً حرارياً وفترات تصريف ممتدة في ظروف التشغيل القاسية.",
-    dist_lubricant_f1: "حماية قصوى من التآكل",
-    dist_lubricant_f2: "استقرار حراري",
-    dist_lubricant_f3: "فترات تصريف ممتدة",
+    // Plastic Bags Card
+    prod_bags_cat: "التغليف",
+    prod_bags_title: "الأكياس البلاستيكية",
+    prod_bags_desc: "أكياس بلاستيكية متينة بمقاسات متعددة لاستخدامات البيع بالتجزئة والتغليف والزراعة والصناعة.",
+    prod_bags_f1: "مقاسات متعددة متوفرة",
+    prod_bags_f2: "قوية ومتينة",
+    prod_bags_f3: "توريد بالجملة",
+    prod_bags_size_s: "صغير",
+    prod_bags_size_m: "متوسط",
+    prod_bags_size_l: "كبير",
+    prod_bags_size_custom: "مقاسات حسب الطلب",
 
     // Global Expansion Card
     dist_tag_expansion: "الانتشار العالمي",
@@ -339,6 +361,11 @@ const translations = {
     dist_expansion_desc: "يعمل السنغال كبوابتنا الاستراتيجية لمنطقة الإيكواس الاقتصادية بأكملها. نعمل بنشاط على توسيع نطاق إمداداتنا عبر 15 دولة في غرب أفريقيا، وبناء خطوط لوجستية قوية من المملكة العربية السعودية عبر داكار لخدمة الطلب الصناعي المتنامي في قطاعات البناء والزراعة والنقل.",
     dist_expansion_f1: "15 دولة في الإيكواس",
     dist_expansion_f2: "سلسلة إمداد سعودية-داكار",
+
+    // Request a Quote Banner
+    prod_cta_title: "تبحث عن مورّد موثوق؟",
+    prod_cta_desc: "تواصل معنا للأسعار والتوفر وطلبات الجملة.",
+    prod_cta_btn: "اطلب عرض سعر",
 
     // Partners Section
     partners_badge: "التحالفات الاستراتيجية",
@@ -435,6 +462,14 @@ function applyTranslations(lang) {
     const key = el.getAttribute('data-i18n');
     if (dict[key] !== undefined) {
       el.textContent = dict[key];
+    }
+  });
+
+  /* --- Rich text (trusted static strings with inline markup) --- */
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (dict[key] !== undefined) {
+      el.innerHTML = dict[key];
     }
   });
 
